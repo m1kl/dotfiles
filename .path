@@ -1,0 +1,4 @@
+# Uncomment after package installation
+#export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+#COMPOSER_VENDORS=~/.composer/vendor/bin
+#export PATH=$PATH:$COMPOSER_VENDORS
