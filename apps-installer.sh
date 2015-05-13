@@ -9,7 +9,7 @@ apt-get -y upgrade
 apt-get -y dist-upgrade
 
 # 02 - Install essential tools
-apt-get -y install nano wget curl tree grsync
+apt-get -y install nano wget curl tree grsync gcc make build-essential
 
 # 03 - Install Multimedia Codecs and Enable DVD Playback
 apt-add-repository -y ppa:mc3man/trusty-media
@@ -37,7 +37,7 @@ wget http://natura.di.uminho.pt/download/sources/Dictionaries/libreoffice/oo3x-p
 unopkg add --force --suppress-license --shared $TMP_DIR/oo3x-pt_PT.oxt
 
 # 09 - Install Additional Web Browser
-cp apt-sources/google-chrome.list /etc/apt/sources.list.d/google-chrome.list
+echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 apt-get -y update
 apt-get install -y google-chrome-stable
@@ -94,10 +94,13 @@ tlp start
 echo "INFO: Don't forget to install additional drivers (http://www.elementarynow.com/graphic-drivers-for-elementary-os/)"
 echo "INFO: Don't forget to install Checkpoint VPN SNX (http://kenfallon.com/check-point-ssl-network-extender/)"
 echo "INFO: Don't forget to install thunderbird extensions and theme (https://gist.github.com/mickael83/450fa000c61c139c725a)"
+echo "INFO: Plank theme https://github.com/fsvh/plank-themes"
+echo "INFO: Chrome plank icon: http://kb.openstudioproject.com/content/fix-double-google-chrome-icon-docky-and-plank"
+echo "INFO: "
 
 echo "TEST: Check Vocal Podcast for Elementary OS (http://www.webupd8.org/2015/04/try-vocal-podcast-manager-designed-for.html)"
-echo "TEST: Check Guake (http://www.webupd8.org/2015/05/drop-down-terminal-guake-070-released.html)"
 echo "TEST Check Pushbullet (http://www.webupd8.org/2015/03/pushbullet-indicator-gets-option-to.html)"
+
 
 # XX - Install Cloud Storage
 # Download DropBox : https://www.dropbox.com/install?os=lnx

@@ -11,10 +11,12 @@ apt-get -y dist-upgrade
 # 02 - Git tools
 apt-get -y install git git-core bash-completion git-flow vim
 wget https://raw.githubusercontent.com/bobthecow/git-flow-completion/master/git-flow-completion.bash -qO /etc/bash_completion.d/git-flow-completion.bash
-echo "deb http://debian.sourcegear.com/ubuntu trusty main" > /etc/apt/sources.list.d/sourcegear.list
-wget -O - http://debian.sourcegear.com/SOURCEGEAR-GPG-KEY | sudo apt-key add -
-apt-get -y update
-apt-get -y install diffmerge
+#echo "deb http://debian.sourcegear.com/ubuntu trusty main" > /etc/apt/sources.list.d/sourcegear.list
+#wget -O - http://debian.sourcegear.com/SOURCEGEAR-GPG-KEY | sudo apt-key add -
+wget http://download-us.sourcegear.com/DiffMerge/4.2.0/diffmerge_4.2.0.697.stable_amd64.deb -P $TMP_DIR
+dpkg -i $TMP_DIR/diffmerge_4.2.0.697.stable_amd64.deb
+#apt-get -y update
+#apt-get -y install diffmerge
 git config --global diff.tool diffmerge
 git config --global difftool.diffmerge.cmd 'diffmerge "$LOCAL" "$REMOTE"'
 git config --global merge.tool diffmerge
@@ -54,7 +56,7 @@ apt-get -y install mysql-workbench-community
 
 # 05 - Install mongodb + robomongo
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 apt-get -y update
 apt-get -y install mongodb-org
 wget http://robomongo.org/files/linux/robomongo-0.8.5-x86_64.deb -P $TMP_DIR
@@ -64,7 +66,7 @@ dpkg -i $TMP_DIR/robomongo-0.8.5-x86_64.deb
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
 apt-get -y install apt-transport-https ca-certificates
 echo "deb http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list
-echo "deb-src http://nginx.org/packages/ubuntu/ codename nginx" >> /etc/apt/sources.list.d/nginx.list
+echo "deb-src http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list
 echo "deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main" > /etc/apt/sources.list.d/passenger.list
 apt-get -y update
 apt-get -y install nginx-full passenger
