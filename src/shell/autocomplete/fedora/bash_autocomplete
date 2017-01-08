@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# [!] Do not rename this file to `bash_completion`
+#     as it will create an infinite loop!
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+if [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
+    . /usr/share/bash-completion/bash_completion
+fi
+
+if [ -f /etc/bash_completion.d/git-flow-completion.bash ] && ! shopt -oq posix; then
+    . /etc/bash_completion.d/git-flow-completion.bash
+fi
+
+if [ -f /etc/bash_completion.d/docker-compose ] && ! shopt -oq posix; then
+    . /etc/bash_completion.d/docker-compose
+fi
