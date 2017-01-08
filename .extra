@@ -1,7 +1,0 @@
-alias w="cd ~/Workspaces"
-alias wp="cd ~/Workspaces/personal"
-alias wi="cd ~/Workspaces/ipleiria"
-alias wb="cd ~/Workspaces/bytencode"
-alias giti='git config --local user.name "Michael Pinheiro"; git config --local user.email "michael.pinheiro@ipleiria.pt"'
-alias gitb='git config --local user.name "Michael Pinheiro"; git config --local user.email "mickael@bytencode.com"'
-alias gitp='git config --local user.name "Michael Pinheiro"; git config --local user.email "mickael.pinheiro@gmail.com"'
