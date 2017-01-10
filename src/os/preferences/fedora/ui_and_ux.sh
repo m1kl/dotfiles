@@ -91,7 +91,7 @@ setup_personalization() {
     execute "gsettings set org.gnome.settings-daemon.plugins.media-keys home '<Super>e'" "Setup explorer shortcut"
     execute "gsettings set org.gnome.desktop.wm.keybindings close \"['<Primary>q']\"" "Setup close window shortcut"
     execute "gsettings set org.gnome.desktop.wm.keybindings show-desktop \"['<Super>d']\"" "Setup show/hide desktop shortcut"
-    execute "gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen \"['<Primary>Return']\"" "Setup toggle fullscreen shortcut"
+    execute "gsettings set org.gnome.desktop.wm.keybindings toggle-fullscreen \"['<Alt><Meta>Return']\"" "Setup toggle fullscreen shortcut"
     execute "gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ reset-and-clear '<Primary><Shift>r'" "Setup reset terminal shortcut"
 
     # Dash to dock extension
