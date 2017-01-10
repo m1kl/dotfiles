@@ -37,11 +37,14 @@ main() {
     install_npm_package "Gulp" "gulp"
     install_npm_package "Bower" "bower"
 
-    #install_npm_package "Ionic" "ionic"
-    #install_npm_package "Cordova" "cordova"
+    install_npm_package "Ionic" "ionic"
+    install_npm_package "Cordova" "cordova"
 
-
-
+    install_npm_package "Yo" "yo"
+    install_npm_package "Angular cli" "angular-cli"
+    install_npm_package "Generator for angular2 library" "generator-angular2-library"
+    install_npm_package "Typings" "typings"
+    
 }
 
 main
