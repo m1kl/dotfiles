@@ -11,3 +11,4 @@ print_in_purple "\n • Installs\n\n"
 ./nvm.sh
 ./npm.sh
 ./vim.sh
+./vscode.sh

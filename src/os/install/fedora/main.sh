@@ -80,7 +80,11 @@ install_apps() {
         add_repo_from_url "http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo"
     fi
     install_package "VirtualBox" "VirtualBox-5.1"
-    install_package "VirtualBox guest additions" "VirtualBox-guest-additions"
+    execute "wget -O /tmp/Oracle_VM_VirtualBox_Extension_Pack-5.1.12-112440.vbox-extpack http://download.virtualbox.org/virtualbox/5.1.12/Oracle_VM_VirtualBox_Extension_Pack-5.1.12-112440.vbox-extpack \
+            && sudo VBoxManage extpack install --replace /tmp/Oracle_VM_VirtualBox_Extension_Pack-5.1.12-112440.vbox-extpack \
+            && rm -rf /tmp/Oracle_VM_VirtualBox_Extension_Pack-5.1.12-112440.vbox-extpack" \
+            "VirtualBox extension pack"
+    
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -115,6 +119,7 @@ install_apps() {
     install_package "KODI Event clients" "kodi-eventclients"
     install_package "Skype for linux" "https://repo.skype.com/latest/skypeforlinux-64-alpha.rpm"
     install_package "Sky (Skype for business)" "https://tel.red/linux.php?f=sky-2.1.6428-1.fc25.x86_64.rpm"    
+    install_package "Facebook messenger" "https://github.com/Aluxian/Messenger-for-Desktop/releases/download/v2.0.4/messengerfordesktop-2.0.4-linux-x86_64.rpm"
 
 }
 
