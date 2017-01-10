@@ -39,9 +39,11 @@ install_latest_stable_node() {
     # Install the latest stable version of Node
     # (this will also set it as the default).
 
+
+
     execute \
         ". $LOCAL_SHELL_CONFIG_FILE \
-            && nvm install node" \
+            && nvm install --lts node" \
         "nvm (install latest Node)"
 }
 
