@@ -112,6 +112,7 @@ install_apps() {
     fi
     install_package "Spotify" "spotify-client"
 
+    install_package "Transmission" "transmission"
     install_package "Remmina" "remmina"
     install_package "Remmina RDP plugin" "remmina-plugins-rdp"
     install_package "GIMP" "gimp"

@@ -26,7 +26,9 @@ install_php_extensions() {
 }
 
 install_typescript_extensions() {
-    install_vscode_extension "Typescript auto import"     "steoates.autoimport"
+    install_vscode_extension "Typescript linter"        "eg2.tslint"
+    install_vscode_extension "Typescript auto import"   "steoates.autoimport"
+    install_vscode_extension "Angular 2 Snippets"       "johnpapa.Angular2"
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
