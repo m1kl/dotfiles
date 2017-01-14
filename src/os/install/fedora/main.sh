@@ -38,6 +38,7 @@ install_common_tools() {
     install_package "gstreamer-ffmpeg" "gstreamer-ffmpeg"
     install_package "libbdplus" "libbdplus"
     install_package "libaacs" "libaacs"      
+    install_package "PT Spelling" "aspell-pt_PT"      
 
 
     #if ! package_is_installed "evopop-gtk-theme"; then
