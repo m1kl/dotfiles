@@ -13,8 +13,14 @@ install_vscode_extension() {
 
 }
 
-install_images_extensions() {
-    install_vscode_extension "SVG Viewer"     "cssho.vscode-svgviewer"
+install_common_extensions() {
+    install_vscode_extension "Docker support" "PeterJausovec.vscode-docker"
+    install_vscode_extension "Gitflow support" "vector-of-bool.gitflow"
+    install_vscode_extension "Colors" "anseki.vscode-color"
+    install_vscode_extension "Prettify json" "mohsen1.prettify-json"
+    install_vscode_extension "Editor config" "EditorConfig.EditorConfig"
+    install_vscode_extension "Trailing spaces" "shardulm94.trailing-spaces"
+    install_vscode_extension "VScode icons" "robertohuertasm.vscode-icons"
 }
 
 install_php_extensions() {
@@ -25,10 +31,13 @@ install_php_extensions() {
     install_vscode_extension "Composer"                     "ikappas.composer"
 }
 
-install_typescript_extensions() {
+install_web_extensions() {
+    install_vscode_extension "SVG Viewer"     "cssho.vscode-svgviewer"
     install_vscode_extension "Typescript linter"        "eg2.tslint"
     install_vscode_extension "Typescript auto import"   "steoates.autoimport"
     install_vscode_extension "Angular 2 Snippets"       "johnpapa.Angular2"
+    install_vscode_extension "Document this" "joelday.docthis"
+    install_vscode_extension "SASS Indented" "robinbentley.sass-indented"
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -36,9 +45,9 @@ install_typescript_extensions() {
 main() {
 
     print_in_purple "\n   vscode extensions\n\n"
-    install_images_extensions
+    install_common_extensions
     install_php_extensions
-    install_typescript_extensions
+    install_web_extensions
     printf "\n"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

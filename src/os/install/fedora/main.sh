@@ -38,7 +38,9 @@ install_common_tools() {
     install_package "gstreamer-ffmpeg" "gstreamer-ffmpeg"
     install_package "libbdplus" "libbdplus"
     install_package "libaacs" "libaacs"      
-    install_package "PT Spelling" "aspell-pt_PT"      
+    install_package "Evolution RSS" "evolution-rss"      
+    install_package "PT ASpelling" "aspell-pt_PT"
+    install_package "PT HunSpelling" "hunspell-pt"      
 
 
     #if ! package_is_installed "evopop-gtk-theme"; then
@@ -123,6 +125,10 @@ install_apps() {
     install_package "Sky (Skype for business)" "https://tel.red/linux.php?f=sky-2.1.6428-1.fc25.x86_64.rpm"    
     install_package "Facebook messenger" "https://github.com/Aluxian/Messenger-for-Desktop/releases/download/v2.0.4/messengerfordesktop-2.0.4-linux-x86_64.rpm"
 
+
+    install_package "MySQL Repo" "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.8-1.fc24.x86_64.rpm"
+    install_package "MySQL Workbench" ""
+
 }
 
 install_dev_tools() {
@@ -141,10 +147,12 @@ install_dev_tools() {
                     "gpgkey=https://yum.dockerproject.org/gpg" 
     fi
     install_package "Docker" "docker-engine"
+    execute "sudo usermod -aG docker $(whoami)" \
+            "Configure docker"
     execute "sudo curl -L 'https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)' -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose \
                 && sudo curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose" \
             "Docker compose"
-    
+
     execute "sudo rpm -i --replacepkgs https://go.microsoft.com/fwlink/?LinkID=760867" "VSCode"
 }
 
