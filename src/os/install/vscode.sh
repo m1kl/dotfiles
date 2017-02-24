@@ -38,6 +38,7 @@ install_web_extensions() {
     install_vscode_extension "Angular 2 Snippets"       "johnpapa.Angular2"
     install_vscode_extension "Document this" "joelday.docthis"
     install_vscode_extension "SASS Indented" "robinbentley.sass-indented"
+    install_vscode_extension "NPM Commands" "fknop.vscode-npm"
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -52,12 +53,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    
-    
+
+
 }
 
 main
